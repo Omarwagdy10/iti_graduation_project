@@ -1,0 +1,56 @@
+<div dir="ltr" class="row sec_nav">
+  <div class="col-10 col-xxl-3 col-xl-3 col-md-3 one">
+    <div class="company_logo">
+      <h4>Company Name</h4>
+    </div>
+  </div>
+
+  <div class="col-10 col-xxl-3 col-xl-3 col-md-3 one">
+    <div dir="rtl" class="d-flex gap-1">
+      <label for="typeahead-format"><i class="pi pi-search"></i>
+      </label>
+      <input
+        id="typeahead-format"
+        type="text"
+        class="form-control"
+        [(ngModel)]="model"
+        [ngbTypeahead]="search"
+        [resultFormatter]="formatter"
+      />
+    </div>
+  </div>
+
+  <div class="col-10 col-xxl-3 col-xl-3 col-md-3 one">
+    <div class="user_options">
+      <div class="faverot">
+        <i class="pi pi-heart"></i>
+      </div>
+
+      <div class="payment">
+        <i class="pi pi-shopping-cart"></i>
+      </div>
+      
+      <div class="user_img">
+        
+        <img data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" src="../../assets/icon-256x256-removebg-preview.png" alt="" />
+
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">User Options</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body ">
+
+            <div class="nav_btns">
+
+              <button type="button" (click)="redirect()" class="btn  btn-outline-info w-100 ">Profile <i class="pi pi-user"></i>              </button>
+              <button type="button" (click)="redirect2()" class="btn  btn-outline-secondary w-100 "> invoice <i class="pi pi-file"></i></button>
+              <button type="button" (click)="redirect3()" class="btn  btn-outline-danger w-100 ">Sign out <i class="pi pi-sign-out"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
