@@ -23,45 +23,25 @@
     <div class="col-xxl-6 col-xl-6 col-10">
       @if (images) {
       <ngb-carousel class="carusel" [showNavigationArrows]="false">
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img
-              class="w-100"
-              src="../../assets/6-removebg-preview.png"
-              alt=""
-            />
-          </div>
-        </ng-template>
 
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img
-              class="w-100"
-              src="../../assets/5-removebg-preview.png"
-              alt=""
-            />
-          </div>
-        </ng-template>
+        @for (item of productcenter; track $index) {
 
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img
-              class="w-100"
-              src="../../assets/7-removebg-preview.png"
-              alt=""
-            />
-          </div>
-        </ng-template>
+          <ng-template ngbSlide>
+  
+            <div class="picsum-img-wrapper carouserl_img">
+              <img
+                class="w-100"
+                src="{{ item.thumbnail }}"
+                alt=""
+              />
+            </div>
+  
+          </ng-template>
 
-        <ng-template ngbSlide>
-          <div class="picsum-img-wrapper">
-            <img
-              class="w-100"
-              src="../../assets/9-removebg-preview.png"
-              alt=""
-            />
-          </div>
-        </ng-template>
+        }
+
+
+        
       </ngb-carousel>
       }
     </div>
