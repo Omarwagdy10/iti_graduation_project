@@ -1,6 +1,11 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <div class="firest_nav_btns d-flex gap-3">
+        <button (click)="redirect1()" type="button" class="btn btn-outline-secondary">Admin</button>
+        <button (click)="redirect2()" type="button" class="btn btn-outline-secondary">User</button>
+        <button (click)="redirect3()" type="button" class="btn btn-outline-secondary">Log in</button>
+
+      </div>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -9,10 +14,6 @@
             <li class="nav-item">
                 <a class="nav-link"  [routerLinkActiveOptions]="{exact:true}" routerLinkActive="active_link" routerLink="home">Home</a>
             </li>
-
-            <li class="nav-item">
-              <a class="nav-link"  routerLinkActive="active_link" routerLink="login">Login</a>
-          </li>
 
           <li class="nav-item">
             <a class="nav-link"  routerLinkActive="active_link" routerLink="product">product</a>

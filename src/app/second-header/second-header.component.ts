@@ -67,7 +67,7 @@ redirect(){
 
 redirect2(){
 
-  this.router.navigate([`profile`])
+  this.router.navigate([`invoices`])
 
 }
 
@@ -75,10 +75,11 @@ redirect2(){
 
 redirect3(){
 
-  this.router.navigate([`profile`])
+  this.router.navigate([`login`])
 
 }
 
+// =============================
 
 
 }

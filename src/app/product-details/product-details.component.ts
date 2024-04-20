@@ -8,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './product-details.component.css'
 })
 export class ProductDetailsComponent {
+  main_img = '../assets/brand1.png'
 
+  reternsrc(newsrc:any){
+    console.log(newsrc);
+    this.main_img= newsrc
+    
+
+  }
 }
