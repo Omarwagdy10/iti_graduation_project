@@ -48,14 +48,14 @@
   </div>
 </div>
 
-<div class="container mx-auto">
+<div class="container-fluid mx-auto">
   
-  <div class="row mostsells_container">
+  <div class="row mostsells_container mx-4">
     <div class="col-10 col-xl-5 col-xxl-5 mostsells">
       <div class="product_data">
         <h1>! New Collection</h1>
         <p class="my-3">Launch Offer 15% Off!</p>
-        <button (click)="redirect4()" type="button" class="btn carusel_btn btn-outline-secondary w-100 p-2 my-5">
+        <button (click)="redirect4()" type="button" class="btn carusel_bt btn-outline-secondary w-100 p-2 my-5">
           انظرالي جميع المنتجات
         </button>
       </div>
@@ -69,7 +69,7 @@
       <div class="product_data">
         <h1>! New Collection</h1>
         <p class="my-3">Launch Offer 15% Off!</p>
-        <button (click)="redirect4()" type="button" class="btn carusel_btn btn-outline-secondary w-100 p-2 my-5">
+        <button (click)="redirect4()" type="button" class="btn carusel_bt btn-outline-secondary w-100 p-2 my-5">
           انظرالي جميع المنتجات
         </button>
       </div>
@@ -80,7 +80,7 @@
     </div>
   </div>
   
-  <div class="row brands">
+  <div class="row brands ">
     <div class="col-10 col-xl-4 col-xxl-5">
       <div class="brand_names">
         <h3>Most Populer Brands</h3>
@@ -116,62 +116,34 @@
   <div class="container-fluid some_offers">
     <h2>بعض عروضنا</h2>
   
-    <div class="row best_product_container row-cols-1 row-cols-md-3 g-4">
-      <div class="col-9 col-xxl-3 col-xl-3 col-md-5">
-        <div class="card p-4 h-100">
-          <img
-            src="../../assets/6-removebg-preview.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content. This content is a little bit longer.
-            </p>
-  
-            <button type="button" (click)="redirect4()" class="btn  carusel_btn btn-success d-flex mx-auto p-2 mt-3">
-              Show More details 
-            </button>
+    <div class="row best_product_container row-cols-1 row-cols-md-3 g-4 ">
+      @for (product of productcenter.slice(0,8); track $index) {
+
+        <div class="col-9 col-xxl-2 col-xl-3 col-md-5 offer_card my-2 ">
+          <div class="card offer_data p-4 h-100 ">
+            
+            <img
+              [src]="product.thumbnail"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body my-4">
+              <h5 class="card-title">{{ product.title }}</h5>
+              <div class="rating">
+
+                <ngb-rating  [(rate)]="product.rating" [readonly]="true" [max]="5"></ngb-rating>
+              </div>
+
+    
+              <button type="button" (click)="redirect4()" class="btn  carusel_Btnss btn-success d-flex w-100 p-1 mt-3">
+                <span>Show More details</span> 
+              </button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="col-9 col-xxl-3 col-xl-3 col-md-5">
-        <div class="card p-4 h-100">
-          <img
-            src="../../assets/6-removebg-preview.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">This is a short card his is a longer card with supporting text below as a natural lead-in to .</p>
-            <button type="button" (click)="redirect4()" class="btn  carusel_btn btn-success d-flex mx-auto p-2 mt-3">
-              Show More details
-            </button>
-          </div>
-        </div>
-      </div>
-      <div class="col-9 col-xxl-3 col-xl-3 col-md-5">
-        <div class="card p-4 h-100">
-          <img
-            src="../../assets/6-removebg-preview.png"
-            class="card-img-top"
-            alt="..."
-          />
-          <div class="card-body">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              This is a longer card with supporting text below as a natural
-              lead-in to additional content.
-            </p>
-            <button type="button" (click)="redirect4()" class="btn  carusel_btn btn-success d-flex mx-auto p-2 mt-3">
-              Show More details
-            </button>
-          </div>
-        </div>
-      </div>
+
+      }
+
   
     </div>
   </div>

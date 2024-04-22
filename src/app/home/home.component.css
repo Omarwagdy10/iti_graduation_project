@@ -213,26 +213,31 @@
   justify-content: space-between;
   align-items: center;
   background-color: #ffffff;
-  border-radius: 12px;
-  padding: 20px;
+  border-radius: 6px;
+  padding: 15px;
 }
 
 .product_img {
-  width: 40%;
+  width: 30%;
 }
 
 .product_img img {
   width: 100%;
   transform: scale(1);
   transition: 0.7s;
+  cursor: pointer;
 }
 
 .product_img img:hover {
-  width: 100%;
   transform: scale(1.1);
-  transition: 0.7s;
-  cursor: pointer;
 }
+
+.carusel_bt{
+  background-color:#5C3DC3 ;
+  color: white;
+  border-radius: 5px;
+}
+
 
 /* ================================ */
 
@@ -282,13 +287,17 @@
 /* ======================= */
 .some_offers {
   padding: 20px;
-  background-color: #eef0fc;
 }
 
 .best_product_container {
   display: flex;
+  flex-wrap: wrap ;
   justify-content: space-between;
-  padding: 20px 0px;
+  /* padding: 20px 0px; */
+}
+
+.offer_card{
+  width: 24%;
 }
 
 .some_offers h2 {
@@ -317,12 +326,38 @@
 .card img {
   transform: scale(1);
   transition: 0.7s;
+  height: 100px;
+  object-fit: contain;
+  width: 100%;
+
 }
 
 .card img:hover {
   transform: scale(1.07);
   cursor: pointer;
 }
+
+.rating{
+  color: #FFD869;
+  font-size: 20px;
+}
+
+.carusel_Btnss{
+border: dashed  #e6e2f5 ;  
+background-color: transparent;
+}
+
+.carusel_Btnss:hover{
+  background-color: #EEEBF9;
+  }
+
+
+.carusel_Btnss span{
+  color: #5C3DC3;
+  margin: 0px auto;
+  }
+  
+
 
 /* ======================================== */
 .services_container {
@@ -378,5 +413,22 @@
     padding: 20px;
     gap: 15px;
     background-color: #eceefa;
+  }
+
+  .offer_card{
+    width: 30%;
+  }
+}
+
+@media (width<800px) {
+  .offer_card{
+    width: 40%;
+  }
+}
+
+
+@media (width<600px) {
+  .offer_card{
+    width: 80%;
   }
 }

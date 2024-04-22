@@ -1,190 +1,55 @@
   
 
-<div class="container  mx-auto">
+<div class="container-fluid  mx-auto">
 
-  <div class="row allproduct_container my-4">
+  <div class="row allproduct_container mx-auto my-4">
+
+    
 
 
+    <div class="col-xxl-9 col-xl-9 col-md-9 col-8">
 
-    <div class="col-9">
-      <div class="row gap-4 my-3 justify-content-center allproduct ">
+      <div class="row allproduct ">
         
-    
-        <div class="col-10 col-xxl-3 col-xl-3 col-md-5 product_data p-3">
-          <div class="product_img">
-            <img
-              class="w-100"
-              src="https://media.istockphoto.com/id/1436061606/photo/flying-colorful-womens-sneaker-isolated-on-white-background-fashionable-stylish-sports-shoe.jpg?b=1&s=612x612&w=0&k=20&c=0HNmSNlbRt-6S0-Skx9DKZxrYYYdJRMJqOyYASt3EEI="
-              alt=""
-            />
-    
-            <button type="button" class="btn d-flex align-center justify-content-center btn-outline-secondary">+</button>
-    
-    
-    
-    
-          </div>
-    
-          <div class="product_price my-3   text-center">
-            <button type="button" class="btn btn-outline-secondary p-1 my-2 ">Categories name</button>
-            <h5>Product Name</h5>
-            <h6 class="my-2">product Price :$500</h6>
-            <ngb-rating  [max]="5"  />
-            
-         
-          </div>
-        </div>
 
-    
-                
-    
-        <div class="col-10 col-xxl-3 col-xl-3 col-md-5 product_data p-3">
-          <div class="product_img">
-            <img
-              class="w-100"
-              src="https://media.istockphoto.com/id/1436061606/photo/flying-colorful-womens-sneaker-isolated-on-white-background-fashionable-stylish-sports-shoe.jpg?b=1&s=612x612&w=0&k=20&c=0HNmSNlbRt-6S0-Skx9DKZxrYYYdJRMJqOyYASt3EEI="
-              alt=""
-            />
-    
-            <button type="button" class="btn d-flex align-center justify-content-center btn-outline-secondary">+</button>
-    
-    
-    
-    
-          </div>
-    
-          <div class="product_price my-3   text-center">
-            <button type="button" class="btn btn-outline-secondary p-1 my-2 ">Categories name</button>
-            <h5>Product Name</h5>
-            <h6 class="my-2">product Price :$500</h6>
-            <ngb-rating  [max]="5"  />
-            
-         
-          </div>
-        </div>
+        @for(product of allproducts.slice(0,20) ; track  $index){
+          <div class="product_data  my-3">
+            <div class="product_img my-2">
+              <img
+                class="w-100"
+                src="{{ product.thumbnail }}"
+                alt=""
+              />      
+            </div>
+      
+            <div class="product_price  p-2  text-center">
+              <button type="button" class="btn btn-outline-secondary p-1 my-2 ">{{ product.category }}</button>
+              <h5 style="color: #6474A9;">Product Name</h5>
+              <div class="rate_product">
+                <ngb-rating [(rate)]="product.rating" [max]="5"></ngb-rating>
 
-    
-    
+              </div>
+              <h5 style="font-weight: 600;" class="my-2">${{ product.price }}</h5>
+              <div class="Btns d-flex gap-3 my-2">
+                                  
+              <button type="button" (click)="redirect(product.id)" class="btn  carusel_Btnss btn-success d-flex w-100 p-1 mt-1">
+                <span>Show More details</span> 
+              </button>
+
+              <button type="button"  class="btn  carusel_Btnss btn-success d-flex w-100 p-1 ">
+                <i class="fas fa-heart"></i>
+              </button>
+
+              </div>
+              
+
+           
+            </div>
+          </div>
+        }
 
                 
     
-        <div class="col-10 col-xxl-3 col-xl-3 col-md-5 product_data p-3">
-          <div class="product_img">
-            <img
-              class="w-100"
-              src="https://media.istockphoto.com/id/1436061606/photo/flying-colorful-womens-sneaker-isolated-on-white-background-fashionable-stylish-sports-shoe.jpg?b=1&s=612x612&w=0&k=20&c=0HNmSNlbRt-6S0-Skx9DKZxrYYYdJRMJqOyYASt3EEI="
-              alt=""
-            />
-    
-            <button type="button" class="btn d-flex align-center justify-content-center btn-outline-secondary">+</button>
-    
-    
-    
-    
-          </div>
-    
-          <div class="product_price my-3   text-center">
-            <button type="button" class="btn btn-outline-secondary p-1 my-2 ">Categories name</button>
-            <h5>Product Name</h5>
-            <h6 class="my-2">product Price :$500</h6>
-            <ngb-rating  [max]="5"  />
-            
-         
-          </div>
-        </div>
-
-    
-    
-
-
-                
-    
-        <div class="col-10 col-xxl-3 col-xl-3 col-md-5 product_data p-3">
-          <div class="product_img">
-            <img
-              class="w-100"
-              src="https://media.istockphoto.com/id/1436061606/photo/flying-colorful-womens-sneaker-isolated-on-white-background-fashionable-stylish-sports-shoe.jpg?b=1&s=612x612&w=0&k=20&c=0HNmSNlbRt-6S0-Skx9DKZxrYYYdJRMJqOyYASt3EEI="
-              alt=""
-            />
-    
-            <button type="button" class="btn d-flex align-center justify-content-center btn-outline-secondary">+</button>
-    
-    
-    
-    
-          </div>
-    
-          <div class="product_price my-3   text-center">
-            <button type="button" class="btn btn-outline-secondary p-1 my-2 ">Categories name</button>
-            <h5>Product Name</h5>
-            <h6 class="my-2">product Price :$500</h6>
-            <ngb-rating  [max]="5"  />
-            
-         
-          </div>
-        </div>
-
-    
-    
-
-
-                
-    
-        <div class="col-10 col-xxl-3 col-xl-3 col-md-5 product_data p-3">
-          <div class="product_img">
-            <img
-              class="w-100"
-              src="https://media.istockphoto.com/id/1436061606/photo/flying-colorful-womens-sneaker-isolated-on-white-background-fashionable-stylish-sports-shoe.jpg?b=1&s=612x612&w=0&k=20&c=0HNmSNlbRt-6S0-Skx9DKZxrYYYdJRMJqOyYASt3EEI="
-              alt=""
-            />
-    
-            <button type="button" class="btn d-flex align-center justify-content-center btn-outline-secondary">+</button>
-    
-    
-    
-    
-          </div>
-    
-          <div class="product_price my-3   text-center">
-            <button type="button" class="btn btn-outline-secondary p-1 my-2 ">Categories name</button>
-            <h5>Product Name</h5>
-            <h6 class="my-2">product Price :$500</h6>
-            <ngb-rating  [max]="5"  />
-            
-         
-          </div>
-        </div>
-
-    
-    
-
-
-                
-    
-        <div class="col-10 col-xxl-3 col-xl-3 col-md-5 product_data p-3">
-          <div class="product_img">
-            <img
-              class="w-100"
-              src="https://media.istockphoto.com/id/1436061606/photo/flying-colorful-womens-sneaker-isolated-on-white-background-fashionable-stylish-sports-shoe.jpg?b=1&s=612x612&w=0&k=20&c=0HNmSNlbRt-6S0-Skx9DKZxrYYYdJRMJqOyYASt3EEI="
-              alt=""
-            />
-    
-            <button type="button" class="btn d-flex align-center justify-content-center btn-outline-secondary">+</button>
-    
-    
-    
-    
-          </div>
-    
-          <div class="product_price my-3   text-center">
-            <button type="button" class="btn btn-outline-secondary p-1 my-2 ">Categories name</button>
-            <h5>Product Name</h5>
-            <h6 class="my-2">product Price :$500</h6>
-            <ngb-rating  [max]="5"  />
-            
-         
-          </div>
-        </div>
 
     
     
@@ -199,14 +64,14 @@
       
     </div>
 
-    <div class="col-3 catogury my-3">
+    <div class="col-4 col-xxl-2 col-xl-3 col-md-3 catogury ">
 
 
       <h6 class="pb-2 search_type d-flex justify-content-center ">
         Filters
       </h6>
       
-      <div class="Categories_items my-3">
+      <div class="Categories_items py-3">
 
 
         
@@ -216,44 +81,17 @@
           Categories
         </h6>
   
-         
+
+        @for (item of category; track $index) {
+
+          <div class="item_name">
+            <p>{{ item }}</p>
+            <input type="checkbox">
+          </div>
+
+        }
         
-        <div class="item_name">
-          <p>Fashion</p>
-          <input type="checkbox">
-        </div>
 
-        <div class="item_name">
-          <p>Fashion</p>
-          <input type="checkbox">
-        </div>
-
-        <div class="item_name">
-          <p>Fashion</p>
-          <input type="checkbox">
-        </div>
-
-        <div class="item_name">
-          <p>Fashion</p>
-          <input type="checkbox">
-        </div>
-
-
-        <div class="item_name">
-          <p>Fashion</p>
-          <input type="checkbox">
-        </div>
-
-
-        <div class="item_name">
-          <p>Fashion</p>
-          <input type="checkbox">
-        </div>
-
-        <div class="item_name">
-          <p>Fashion</p>
-          <input type="checkbox">
-        </div>
  
       </div>
 
@@ -262,34 +100,12 @@
         <h6 class="pb-2 search_type  d-flex justify-content-center">
           Rate
         </h6>
-  
+        <div class="card">
+          <input type="text" pInputText [(ngModel)]="rangeValues" [readOnly]="true" class="w-full"/>
+          <p-slider [(ngModel)]="rangeValues" [max]="500" [range]="true"></p-slider>
+      </div>
+
         
-        <div class="item_rate">
-          <input type="radio" name="rate">
-          <ngb-rating [max]="5" [rate]="5" [readonly]="true" />
-        </div>
-
-        <div class="item_rate">
-          <input type="radio" name="rate">
-          <ngb-rating [max]="5" [rate]="4" [readonly]="true" />
-        </div>
-
-        <div class="item_rate">
-          <input type="radio" name="rate">
-          <ngb-rating [max]="5" [rate]="3" [readonly]="true" />
-        </div>
-
-        <div class="item_rate">
-          <input type="radio" name="rate">
-          <ngb-rating [max]="5" [rate]="2" [readonly]="true" />
-        </div>
-
-
-        <div class="item_rate">
-          <input type="radio" name="rate">
-          <ngb-rating [max]="5" [rate]="1" [readonly]="true" />
-        </div>
-
 
       </div>
 
@@ -299,5 +115,7 @@
 
   </div>
 
+
+</div>
 
 </div>

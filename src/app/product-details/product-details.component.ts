@@ -1,19 +1,47 @@
-import { Component } from '@angular/core';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [],
+  imports: [HttpClientModule],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
-export class ProductDetailsComponent {
-  main_img = '../assets/brand1.png'
-
+export class ProductDetailsComponent implements OnInit {
+  main_img:any
+  @Input() id? :any
+  
   reternsrc(newsrc:any){
-    console.log(newsrc);
     this.main_img= newsrc
     
 
   }
-}
+  
+   product_details : any 
+  constructor(private ActivatedRoute : ActivatedRoute,private http :HttpClient){}
+  ngOnInit(): void {
+    // console.log(this.ActivatedRoute.snapshot.params['id']);
+   const product_id = this.ActivatedRoute.snapshot.params['id']
+    // console.log(product_id);
+    
+    this.http.get(`https://dummyjson.com/products/${product_id}`).subscribe((res: any) =>{
+      this.product_details = res ;
+
+      this.main_img = this.product_details.thumbnail
+
+    });
+    
+      
+     }
+
+  
+
+ 
+  }
+
+
+
+
+
