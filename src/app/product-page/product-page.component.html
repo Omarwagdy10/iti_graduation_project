@@ -1,6 +1,6 @@
   
 
-<div class="container-fluid  mx-auto">
+<div dir="rtl" class="container-fluid  mx-auto">
 
   <div class="row allproduct_container mx-auto my-4">
 
@@ -14,9 +14,9 @@
 
         @for(product of allproducts.slice(0,20) ; track  $index){
           <div class="product_data  my-3">
-            <div class="product_img my-2">
+            <div class="product_img">
               <img
-                class="w-100"
+                class="w-100 p-3"
                 src="{{ product.thumbnail }}"
                 alt=""
               />      
@@ -24,19 +24,19 @@
       
             <div class="product_price  p-2  text-center">
               <button type="button" class="btn btn-outline-secondary p-1 my-2 ">{{ product.category }}</button>
-              <h5 style="color: #6474A9;">Product Name</h5>
+              <p class="product_name" style="color: #6474A9;">{{ product.title }}</p>
               <div class="rate_product">
                 <ngb-rating [(rate)]="product.rating" [max]="5"></ngb-rating>
 
               </div>
-              <h5 style="font-weight: 600;" class="my-2">${{ product.price }}</h5>
+              <h2 style="font-weight: 600;" class="my-2">${{ product.price }}</h2>
               <div class="Btns d-flex gap-3 my-2">
                                   
-              <button type="button" (click)="redirect(product.id)" class="btn  carusel_Btnss btn-success d-flex w-100 p-1 mt-1">
+              <button type="button" (click)="redirect(product.id)" class="btn  carusel_Btnss btn d-flex w-100 p-1 mt-1">
                 <span>Show More details</span> 
               </button>
 
-              <button type="button"  class="btn  carusel_Btnss btn-success d-flex w-100 p-1 ">
+              <button type="button"  class="btn  carusel_Btnss  d-flex w-100 p-1 ">
                 <i class="fas fa-heart"></i>
               </button>
 
@@ -67,9 +67,9 @@
     <div class="col-4 col-xxl-2 col-xl-3 col-md-3 catogury ">
 
 
-      <h6 class="pb-2 search_type d-flex justify-content-center ">
+      <h4 class="pb-2 search_type d-flex justify-content-center ">
         Filters
-      </h6>
+      </h4>
       
       <div class="Categories_items py-3">
 
@@ -77,9 +77,9 @@
         
       <div class="type">
         
-        <h6 class="pb-2 search_type d-flex justify-content-center">
+        <h4 class="pb-2 search_type d-flex justify-content-center">
           Categories
-        </h6>
+        </h4>
   
 
         @for (item of category; track $index) {
@@ -97,9 +97,9 @@
 
       <div class="Rate" dir="ltr">
         
-        <h6 class="pb-2 search_type  d-flex justify-content-center">
-          Rate
-        </h6>
+        <h4 class="pb-2 search_type  d-flex justify-content-center">
+          Price
+        </h4>
         <div class="card">
           <input type="text" pInputText [(ngModel)]="rangeValues" [readOnly]="true" class="w-full"/>
           <p-slider [(ngModel)]="rangeValues" [max]="500" [range]="true"></p-slider>

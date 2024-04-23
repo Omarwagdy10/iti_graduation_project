@@ -1,11 +1,14 @@
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
+import { ButtonModule } from 'primeng/button';
+import { TabViewModule } from 'primeng/tabview';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [HttpClientModule],
+  imports: [HttpClientModule,NgbRatingModule,TabViewModule,ButtonModule],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
@@ -35,6 +38,11 @@ export class ProductDetailsComponent implements OnInit {
     
       
      }
+
+
+    //  ==================================
+
+    activeIndex: number = 0;
 
   
 

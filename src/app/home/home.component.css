@@ -30,6 +30,7 @@
     #efd8d6
   );
   border: none;
+  padding: 120px 0px ;
 }
 
 .data {
@@ -44,11 +45,31 @@
   padding: 5px;
 }
 
-.data h1 {
-  display: flex;
+.saless{
+  width: 100%;
+  font-size: 40px;
   flex-direction: column;
-  /* margin: 10px 0px; */
-  font-size: 70px;
+  gap: 10px;
+  background: linear-gradient(
+    120deg,
+    #ad51ee,
+    #b04ce4,
+    #b449de,
+    #b844d3,
+    #bd3fc9,
+    #bf3bc1,
+    #bf3cc3,
+    #c339bc,
+    #c636b5,
+    #d52794,
+    #da228a,
+    #e31773,
+    #eb1064
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+  color: transparent;
 }
 
 .carusel_btn {
@@ -66,126 +87,23 @@
   font-weight: 700;
 }
 
+
+
 .sale {
-  display: flex;
   align-items: center;
-  animation-name: sale;
-  animation-duration: 4s;
-  animation-timing-function: 0.5;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  background: linear-gradient(
-    120deg,
-    #ad51ee,
-    #b04ce4,
-    #b449de,
-    #b844d3,
-    #bd3fc9,
-    #bf3bc1,
-    #bf3cc3,
-    #c339bc,
-    #c636b5,
-    #d52794,
-    #da228a,
-    #e31773,
-    #eb1064
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
   color: transparent;
-  font-size: 60px;
-}
+  font-size: 30px;
+  font-weight: 700;
+} 
 
 .sale2 {
   border: solid;
-  display: flex;
-  align-items: center;
-  animation-name: sale2;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  background: linear-gradient(
-    120deg,
-    #ad51ee,
-    #b04ce4,
-    #b449de,
-    #b844d3,
-    #bd3fc9,
-    #bf3bc1,
-    #bf3cc3,
-    #c339bc,
-    #c636b5,
-    #d52794,
-    #da228a,
-    #e31773,
-    #eb1064
-  );
-  -webkit-background-clip: text;
+  align-items: center; 
   background-clip: text;
   color: transparent;
-  font-size: 45px;
-}
-
-@keyframes sale {
-  0% {
-    font-weight: 300;
-  }
-  12.5% {
-    font-weight: 400;
-  }
-  25% {
-    font-weight: 500;
-  }
-  37.5% {
-    font-weight: 600;
-  }
-  50% {
-    font-weight: 700;
-  }
-  62.5% {
-    font-weight: 600;
-  }
-  75% {
-    font-weight: 500;
-  }
-  87.5% {
-    font-weight: 400;
-  }
-  100% {
-    font-weight: 300;
-  }
-}
-
-@keyframes sale2 {
-  0% {
-    font-weight: 700;
-  }
-  12.5% {
-    font-weight: 600;
-  }
-  25% {
-    font-weight: 500;
-  }
-  37.5% {
-    font-weight: 400;
-  }
-  50% {
-    font-weight: 300;
-  }
-  62.5% {
-    font-weight: 700;
-  }
-  75% {
-    font-weight: 600;
-  }
-  87.5% {
-    font-weight: 500;
-  }
-  100% {
-    font-weight: 400;
-  }
+  font-size: 30px;
+  font-weight: 700;
+  
 }
 
 .carouserl_img {
@@ -195,7 +113,7 @@
 }
 
 .carouserl_img img {
-  height: 350px;
+  height: 400px;
   object-fit: contain;
 }
 
@@ -203,7 +121,7 @@
 .mostsells_container {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
+  gap: 2px;
   padding: 30px 0px;
   background-color: #eef0fc;
 }
@@ -215,6 +133,8 @@
   background-color: #ffffff;
   border-radius: 6px;
   padding: 15px;
+  width: 49%;
+
 }
 
 .product_img {
@@ -300,7 +220,9 @@
   width: 24%;
 }
 
-.some_offers h2 {
+
+
+.some_offersh {
   background: linear-gradient(
     120deg,
     #ad51ee,
@@ -364,12 +286,13 @@ background-color: transparent;
   display: flex;
   justify-content: space-between;
   padding: 20px;
-  gap: 7px ;
+  /* gap: 7px ; */
   background-color: #eceefa;
 }
 
-.servece{
-  height: 100%;
+.service{
+  /* height: 100%; */
+  width: 24%;
 }
 
 .icon_color1 {
@@ -399,24 +322,31 @@ background-color: transparent;
     padding: 20px 0px;
   }
 
-  .mostsells_container {
-    display: flex;
-    justify-content: center;
-    /* gap: 20px; */
-    padding: 30px 0px;
-    background-color: #eef0fc;
-  }
-
   .services_container {
     display: flex;
     justify-content: center;
-    padding: 20px;
-    gap: 15px;
-    background-color: #eceefa;
+    padding: 20px 0px;
+    gap: 10px ;
   }
 
+  
   .offer_card{
     width: 30%;
+  }
+
+  .service{
+    width: 40%;
+  }
+  
+  .mostsells_container {
+    gap: 15px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mostsells {
+    width: 95%;
+  
   }
 }
 
@@ -424,6 +354,12 @@ background-color: transparent;
   .offer_card{
     width: 40%;
   }
+
+  .service{
+    width: 80%;
+  }
+  
+
 }
 
 
@@ -431,4 +367,6 @@ background-color: transparent;
   .offer_card{
     width: 80%;
   }
+
+  
 }

@@ -1,7 +1,7 @@
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
+  padding: 0 ;
+  margin: 0 ;
+  box-sizing: border-box ;
   text-decoration: none;
 }
 
@@ -21,6 +21,7 @@
 .Companyandsearch {
   display: flex;
   align-items: center;
+  /* border: solid; */
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 10px;
@@ -139,15 +140,19 @@
 
 .offcanvas-body {
   display: flex;
+
 }
+
 
 .dropend {
   margin: 20px 0px;
+  display: flex;
 }
 
 .dropend button {
   padding: 7px 14px;
 }
+
 
 .dropdown-toggle {
   display: flex;

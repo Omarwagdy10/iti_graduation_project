@@ -1,4 +1,4 @@
-* {
+*{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -14,17 +14,23 @@
 .allproduct {
   display: flex;
   justify-content: space-around;
-  gap: 10px;
+}
+
+.product_name{
+  overflow: hidden;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 /* ===================================== */
 .catogury {
-  border: solid 1.5px;
   border-radius: 12px;
   padding: 10px;
   background-color: white;
   margin-top: 15px;
 }
+
+
 
 .type {
   display: flex;
@@ -49,16 +55,17 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  padding: 0px 20px;
+  /* padding: 0px 20px; */
 }
+
 
 .item_name {
   display: flex;
   justify-content: end;
   align-items: center;
   gap: 5px;
-  padding: 0px 7px;
-  font-size: 16px;
+  /* padding: 0px 7px; */
+  font-size: 14px;
   font-weight: 600;
 }
 
@@ -82,12 +89,12 @@
 .product_img img {
   height: 150px;
   object-fit: contain;
+  background-color: white;
 }
 
 .product_data {
-  border: solid 1px;
-  border-radius: 7px;
-  border-radius: 10px;
+  /* border: solid 1px; */
+  border-radius: 6px;
   width: 23%;
   overflow: hidden;
 
